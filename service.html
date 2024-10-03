@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>合同会社ミセルリカのサービス</title>
   <meta name="description" content="科学が浸透した社会へ">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -69,16 +69,45 @@
       padding: 1rem;
       text-align: center;
     }
+    
+    .service-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .service-item {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: calc(50% - 1rem);
+      text-align: left;
+    }
+
+    .service-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .service-item p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .service-item a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00f;
+      text-decoration: none;
+    }
+
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-      }
-      nav ul {
-        flex-direction: column;
+      .service-item {
+        width: 100%;
       }
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 <body>
 
@@ -93,41 +122,34 @@
   </ul>
 </nav>
 
-<section id="top">
+<section id="services">
   <h4>サービス一覧</h4>
-  <p>※あくまでも一例です。</p>
-</section>
-
-<section id="consulting">
-  <h4>科学技術に関するコンサルティングおよび地方自治体や地域社会への支援業務</h4>
-  <p>科学が浸透した社会を目指します。特にどうすれば良いかわからない場合。※基本的に新潟のために</p>
-<p>科学技術および工業を通じた地域活性化に関する相談およびオンラインによる地域支援</p>
-<p>行政機関等に対する科学政策に関する提言の検討および実施</p>
-</section>
-
-<section id="book">
-  <h4>科学に関する書籍、教材の執筆、校正</h4>
-  <p>すでに実績があります。</p>
-</section>
-
-  <section id="degitaltext">
-  <h4>科学の普及を目的としたデジタルコンテンツおよびオンライン教材の提供</h4>
-  <p>記述問題特訓、トレーニングコースを用意</p>
-</section>
-
-<section id="workshop">
-  <h4>自然科学および科学技術の普及を目的とした講座、ワークショップ、セミナーの企画および運営</h4>
-  <p>実験教室の例を挙げる。子供対象、大人対象。理科レント</p>
-</section>
-
-<section id="advertize">
-  <h4>科学教育および科学技術の普及に関する広告および宣伝業務、ならびに情報発信</h4>
-  <p>Sci-Upについて。（小中高生用も作る？）</p>
-</section>
-
-<section id="juku">
-  <h4>地域の児童・生徒に対する学習教室の運営およびオンライン教育の提供</h4>
-  <p>Genro-n</p>
+  <div class="service-section">
+    <div class="service-item">
+      <img src="consulting.jpg" alt="コンサルティング">
+      <h5>科学技術に関するコンサルティング</h5>
+      <p>科学が浸透した社会を目指します。地方自治体や地域社会への支援も行っています。</p>
+      <a href="consulting.html">詳しく見る</a>
+    </div>
+    <div class="service-item">
+      <img src="book.jpg" alt="書籍執筆">
+      <h5>科学に関する書籍、教材の執筆</h5>
+      <p>科学分野における執筆および校正の実績があります。</p>
+      <a href="book.html">詳しく見る</a>
+    </div>
+    <div class="service-item">
+      <img src="digital_content.jpg" alt="デジタルコンテンツ">
+      <h5>デジタルコンテンツの提供</h5>
+      <p>科学の普及を目的としたオンライン教材を提供しています。</p>
+      <a href="digital_content.html">詳しく見る</a>
+    </div>
+    <div class="service-item">
+      <img src="workshop.jpg" alt="ワークショップ">
+      <h5>講座やワークショップの運営</h5>
+      <p>子供から大人まで、実験教室やワークショップを企画・運営しています。</p>
+      <a href="workshop.html">詳しく見る</a>
+    </div>
+  </div>
 </section>
 
 <footer>
