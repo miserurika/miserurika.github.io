@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>合同会社ミセルリカ〜科学が浸透した社会へ〜</title>
+  <meta name="description" content="科学が浸透した社会へ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('bg2.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 0 5%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .header-left {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-left button {
+      margin-bottom: 10px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-inquiry {
+      background-color: #ff3333;
+      color: white;
+    }
+    .btn-materials {
+      background-color: #ffcc00;
+      color: white;
+      font-size: 0.9em;
+    }
+    .header-right iframe {
+      width: 560px;
+      height: 315px;
+    }
+    nav {
+      background-color: rgba(51, 51, 51, 0.8);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    nav a.contact-link {
+      color: #ffcc00;
+    }
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+      background-color: #fff;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .info-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .info-item {
+      width: 23%;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .info-item img {
+      width: 100%;
+      height: auto;
+    }
+    .info-item a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      .header-right iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <button class="btn-inquiry">気軽にお問い合わせください</button>
+    <button class="btn-materials">サービス資料・お役立ち資料</button>
+  </div>
+  <div class="header-right">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#top">ミセルリカ</a></li>
+    <li><a href="service.html">サービス</a></li>
+    <li><a href="materials.html">お役立ち資料</a></li>
+    <li><a href="sciup.html">情報雑誌Sci-Up</a></li>
+    <li><a href="company.html">会社紹介</a></li>
+    <li><a href="contact.html" class="contact-link">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<section id="latest">
+  <h4>ミセルリカの最新情報（オンラインでも開催中）</h4>
+  <div class="info-grid">
+    <div class="info-item">
+      <img src="img1.jpg" alt="更新項目1">
+      <p>2024/10/30: <a href="detail.html#1">イベント開催しました</a></p>
+    </div>
+    <div class="info-item">
+      <img src="img2.jpg" alt="更新項目2">
+      <p>2024/11/05: <a href="detail.html#2">新しいサービスを開始</a></p>
+    </div>
+    <div class="info-item">
+      <img src="img3.jpg" alt="更新項目3">
+      <p>2024/12/01: <a href="detail.html#3">次回イベント予定</a></p>
+    </div>
+    <div class="info-item">
+      <img src="img4.jpg" alt="更新項目4">
+      <p>2025/01/15: <a href="detail.html#4">新サービスのお知らせ</a></p>
+    </div>
+  </div>
+  <p><a href="more.html">もっと見る</a></p>
+</section>
+
+<section id="about">
+  <h4>どんな会社か？「可能性を広げる科学をどう提供しているのか？」</h4>
+  <p>ミセルリカは科学をより身近に、わかりやすく提供することに力を入れています。</br><a href="service.html">詳細はサービスページへ</a>。</p>
+  <p><a href="mmv.html">ミッション・ビジョン・バリュー(MMV)はこちら</a></p>
+</section>
+
+<section id="contact">
+  <h4>お問い合わせ</h4>
+  <p>フォームでのご相談は<a href="contact-form.html">こちら</a>。通常２日以内に回答いたしますのでぜひお気軽にご相談ください。</p>
+  <p>無料オンライン相談も承っております。<a href="online-consult.html">こちらからどうぞ</a>。</p>
+</section>
+
+<footer>
+  <p>Copyright: 合同会社ミセルリカ</p>
+  <p><a href="site-map.html" style="color: white;">サイトマップ</a> / <a href="link.html" style="color: white;">リンク</a></p>
+  <p><a href="#" style="color: white;">上に戻る</a></p>
+</footer>
+
+</body>
+</html>
