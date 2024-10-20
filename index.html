@@ -133,6 +133,18 @@
     .info-item a:hover {
       text-decoration: underline;
     }
+    table {
+  border-collapse: collapse;
+  border: white;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+th,
+td{
+  border: 0px;
+  padding: 8px 10px;
+}
     footer {
       background-color: #333;
       color: white;
@@ -177,8 +189,16 @@
 
 <section id="latest">
   <h4>ミセルリカの最新情報（オンラインでも開催中）</h4>
-     <div class="two.columns"><p>ニュースリリース</p></div>
-    <div class="two.columns"> <p>今後のスケジュール</p></div>
+  <table>
+  <tbody>
+    <tr>
+      <td>ニュースリリース　</td>
+  	  <td>　　　　　　　　　</td>
+      <td>今後のスケジュール</td>
+      <td>　　　　　　　　　</td>
+    </tr>
+  </tbody>
+</table>
   <div class="info-grid">
     <div class="info-item">
       <img src="img1.jpg" alt="更新項目1">
