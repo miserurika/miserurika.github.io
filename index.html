@@ -27,6 +27,50 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       text-decoration: none;
     }
+    .drawer_hidden {
+  display: none;
+}
+    .drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+    .drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer_open span:before {
+  bottom: 8px;
+}
+.drawer_open span:after {
+  top: 8px;
+}
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
     .header-left {
       display: flex;
       flex-direction: column;
@@ -187,6 +231,22 @@ td{
 <body>
 
 <header>
+   <header class="header">
+     <div class="nav">
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+    <nav class="nav_content">
+          <ul>
+    <li><a href="#top" class="current">トップ</a></li>
+    <li><a href="service.html">サービス</a></li>
+    <li><a href="sciup.html">情報雑誌Sci-Up</a></li>
+    <li><a href="company.html">会社紹介</a></li>
+    <li><a href="contact.html" class="contact-link">お問い合わせ</a></li>
+    <li><a href="materials.html" class="material-link">お役立ち資料</a></li>
+  </ul>
+        </nav>
+      </div>
+    </header>
   <div class="header-left">
     <h1>科学が浸透した<span>社会へ</span></h1>
     <button class="btn-inquiry"><a href="sciup.html">気軽にお問い合わせ<span>ください</span></a></button>
@@ -196,17 +256,6 @@ td{
     <video width="480" src="MOVIE.mp4" autoplay="autoplay" poster="" id="cm" playsinline="" muted loop="loop" controls="controls"></video>
         </div>
 </header>
-  
-<nav>
-  <ul>
-    <li><a href="#top" class="current">トップ</a></li>
-    <li><a href="service.html">サービス</a></li>
-    <li><a href="sciup.html">情報雑誌Sci-Up</a></li>
-    <li><a href="company.html">会社紹介</a></li>
-    <li><a href="contact.html" class="contact-link">お問い合わせ</a></li>
-    <li><a href="materials.html" class="material-link">お役立ち資料</a></li>
-  </ul>
-</nav>
 
 <section id="latest">
   <h4>ミセルリカの最新情報（オンラインでも開催）</h4>
@@ -227,7 +276,7 @@ td{
     </div>
     <div class="info-item">
       <img src="photo/img-gray.jpg" alt="">
-      <p>2024/11/05: <a href="detail.html#2"></a></p>
+      <p><a href="detail.html#2"></a></p>
     </div>
     <div class="info-item">
       <img src="photo/img3.jpg" alt="次回イベント">
@@ -242,7 +291,7 @@ td{
 </section>
 
 <section id="about">
-  <h4>科学は可能性を拡げる　<span><i>Science broaden our horizens.</i></span></h4>
+  <h4>科学は可能性を拡げる　<span><i>Science broadens our horizens.</i></span></h4>
   <p>ミセルリカは科学をより身近にするため、わかりやすく科学を提供します。</p><p>情報誌・広告誌の頒布、科学技術コンサルティング、書籍・教材の執筆・校正・監修、教育支援。これらをミセルリカにお任せあれ。</p>詳細は<a href="service.html">サービスページ</a>へ。</p>
   <p><a href="company.html">ミッション・ビジョン・バリュー(MMV)</a>はこちら。</p>
 </section>
