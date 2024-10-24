@@ -27,50 +27,6 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       text-decoration: none;
     }
-    .drawer_hidden {
-  display: none;
-}
-    .drawer_open {
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 100;
-  cursor: pointer;
-}
-    .drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background: #333;
-  transition: 0.5s;
-  position: absolute;
-}
-.drawer_open span:before {
-  bottom: 8px;
-}
-.drawer_open span:after {
-  top: 8px;
-}
-#drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
-
-#drawer_input:checked ~ .drawer_open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-
-#drawer_input:checked ~ .drawer_open span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
     .header-left {
       display: flex;
       flex-direction: column;
@@ -131,8 +87,55 @@
       position: fixed;
       width: 100%;
       top: 0;
-      left: 0;
+      left: 100%;
       z-index: 10;
+    }
+     .drawer_hidden {
+  display: none;
+}
+    .drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+    .drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer_open span:before {
+  bottom: 8px;
+}
+.drawer_open span:after {
+  top: 8px;
+}
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+    #drawer_input:checked ~ .nav {
+  left: 0;
     }
     nav ul {
       display: flex;
@@ -161,6 +164,9 @@
     }
      nav a.current {
       color: #87cefa;
+    }
+    button a {
+      text-decolation: none;
     }
     section {
       padding: 4rem 1rem;
@@ -231,11 +237,9 @@ td{
 <body>
 
 <header>
-   <header class="header">
-     <div class="nav">
-    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    <nav>
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
     <label for="drawer_input" class="drawer_open"><span></span></label>
-    <nav class="nav_content">
           <ul>
     <li><a href="#top" class="current">トップ</a></li>
     <li><a href="service.html">サービス</a></li>
@@ -245,8 +249,6 @@ td{
     <li><a href="materials.html" class="material-link">お役立ち資料</a></li>
   </ul>
         </nav>
-      </div>
-    </header>
   <div class="header-left">
     <h1>科学が浸透した<span>社会へ</span></h1>
     <button class="btn-inquiry"><a href="sciup.html">気軽にお問い合わせ<span>ください</span></a></button>
